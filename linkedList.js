@@ -84,7 +84,7 @@ LL.addToTail('Boca')
 LL.addToTail('River')
 LL.addToTail('Gremio')
 
-var index = LL.indexOf('Palmeiras');
+var index = LL.indexOf('Boc');
 
 // LL.addToHead(100);
 // LL.addToHead(200);
