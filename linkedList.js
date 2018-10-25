@@ -52,20 +52,52 @@ LinkedList.prototype.removeTail = function () {
   return val
 }
 
+LinkedList.prototype.search = function (searchValue) {
+  var currentNode = this.head;
+  while (currentNode) {
+    if (currentNode.value === searchValue) {
+      return currentNode.value;
+    }
+    currentNode = currentNode.next;
+  }
+  return null;
+}
+
+LinkedList.prototype.indexOf = function (value) {
+  var indexes = [];
+  var currentIndex = 0;
+  var currentNode = this.head;
+  while (currentNode) {
+    if (currentNode.value === value) {
+      indexes.push(currentIndex)
+    }
+    currentNode = currentNode.next;
+    currentIndex++;
+  }
+  return indexes;
+}
+
 var LL = new LinkedList();
 
-LL.addToHead(100);
-LL.addToHead(200);
+LL.addToTail('Palmeiras')
+LL.addToTail('Boca')
+LL.addToTail('River')
+LL.addToTail('Gremio')
+
+var index = LL.indexOf('Palmeiras');
+
+// LL.addToHead(100);
+// LL.addToHead(200);
 // LL.addToHead(300);
 
 // LL.removeHead(100);
 // LL.removeHead(200);
 
-LL.removeTail(100);
-LL.removeTail(200);
+// LL.removeTail(100);
+// LL.removeTail(200);
 
 // LL.addToTail(100);
 // LL.addToTail(200);
 // LL.addToTail(300);
 
-console.log(LL)
+console.log(index)
