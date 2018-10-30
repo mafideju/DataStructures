@@ -10,3 +10,6 @@ const fact = factorial(4);
 setTimeout(() => {
   console.log('total:', fact)
 }, 1800);
+
+
+// CONTINUA EM BST.JS
